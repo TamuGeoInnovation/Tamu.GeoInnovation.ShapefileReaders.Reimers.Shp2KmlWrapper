@@ -1,0 +1,9 @@
+C:\DevSource\Tamu\GeoInnovation\ShapefileReaders\Remiers.Shp2Kml\src\Main\obj\Release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2KmlWrapper.dll
+C:\DevSource\Tamu\GeoInnovation\ShapefileReaders\Remiers.Shp2Kml\src\Main\obj\Release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2KmlWrapper.pdb
+C:\DevBuild\Tamu\GeoInnovation\ShapefileReaders\Reimers.Shp2KmlWrapper\build\1.0.0\release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2KmlWrapper.dll
+C:\DevBuild\Tamu\GeoInnovation\ShapefileReaders\Reimers.Shp2KmlWrapper\build\1.0.0\release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2KmlWrapper.pdb
+C:\DevSource\Tamu\GeoInnovation\ShapefileReaders\Remiers.Shp2KmlWrapper\src\Main\obj\Release\ShapefileReaders.Reimers.Shp2KmlWrapper.csprojResolveAssemblyReference.cache
+C:\DevSource\Tamu\GeoInnovation\ShapefileReaders\Remiers.Shp2KmlWrapper\src\Main\obj\Release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2KmlWrapper.dll
+C:\DevSource\Tamu\GeoInnovation\ShapefileReaders\Remiers.Shp2KmlWrapper\src\Main\obj\Release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2KmlWrapper.pdb
+C:\DevSource\Tamu\GeoInnovation\ShapefileReaders\Remiers.Shp2KmlWrapper\build\1.0.0\AnyCPU\release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2KmlWrapper.dll
+C:\DevSource\Tamu\GeoInnovation\ShapefileReaders\Remiers.Shp2KmlWrapper\build\1.0.0\AnyCPU\release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2KmlWrapper.pdb

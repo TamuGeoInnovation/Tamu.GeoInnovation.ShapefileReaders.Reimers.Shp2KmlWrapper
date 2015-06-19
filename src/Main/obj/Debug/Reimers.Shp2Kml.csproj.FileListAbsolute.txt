@@ -1,0 +1,5 @@
+C:\Dev\3rdParty\Reimers\Remiers.Shp2Kml\build\v1.0\bin\AnyCPU\debug\Reimers.Shp2Kml.dll
+C:\Dev\3rdParty\Reimers\Remiers.Shp2Kml\build\v1.0\bin\AnyCPU\debug\Reimers.Shp2Kml.pdb
+C:\Dev\3rdParty\Reimers\Remiers.Shp2Kml\src\obj\Debug\Reimers.Shp2Kml.csprojResolveAssemblyReference.cache
+C:\Dev\3rdParty\Reimers\Remiers.Shp2Kml\src\obj\Debug\Reimers.Shp2Kml.dll
+C:\Dev\3rdParty\Reimers\Remiers.Shp2Kml\src\obj\Debug\Reimers.Shp2Kml.pdb
