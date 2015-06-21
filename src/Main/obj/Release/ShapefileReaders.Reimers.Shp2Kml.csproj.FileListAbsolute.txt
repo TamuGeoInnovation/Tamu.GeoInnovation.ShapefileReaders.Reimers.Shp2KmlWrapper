@@ -1,4 +1,0 @@
-C:\DevBuild\Tamu\GeoInnovation\ShapefileReaders\Reimers.Shp2Kml\build\1.0.0\release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2Kml.dll
-C:\DevBuild\Tamu\GeoInnovation\ShapefileReaders\Reimers.Shp2Kml\build\1.0.0\release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2Kml.pdb
-C:\DevSource\Tamu\GeoInnovation\ShapefileReaders\Remiers.Shp2Kml\src\Main\obj\Release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2Kml.dll
-C:\DevSource\Tamu\GeoInnovation\ShapefileReaders\Remiers.Shp2Kml\src\Main\obj\Release\Tamu.GeoInnovation.ShapefileReaders.Reimers.Shp2Kml.pdb
