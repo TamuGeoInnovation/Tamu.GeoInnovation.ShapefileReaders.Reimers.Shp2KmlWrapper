@@ -89,7 +89,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Reimers.Map">
-      <HintPath>..\..\..\..\..\..\..\DevDependencies\Reimers\Reimers.Map\build\v1.0\bin\AnyCPU\release\Reimers.Map.dll</HintPath>
+      <HintPath>..\..\libs\Reimers.Map.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
