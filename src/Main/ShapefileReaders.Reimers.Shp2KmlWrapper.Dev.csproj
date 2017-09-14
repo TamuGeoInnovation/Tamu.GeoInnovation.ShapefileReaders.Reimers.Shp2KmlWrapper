@@ -91,8 +91,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.11.0.1\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+    <Reference Include="Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.10.50.1600.1\lib\Net20\Microsoft.SqlServer.Types.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Reimers.Map">
@@ -116,7 +116,6 @@
     <Compile Include="Shapefile.cs" />
     <Compile Include="ShapefileRecord.cs" />
     <Compile Include="ShapeRecord.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -140,24 +139,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x64\msvcr100.dll">
-      <Link>SqlServerTypes\x64\msvcr100.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x64\SqlServerSpatial110.dll">
-      <Link>SqlServerTypes\x64\SqlServerSpatial110.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x86\msvcr100.dll">
-      <Link>SqlServerTypes\x86\msvcr100.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x86\SqlServerSpatial110.dll">
-      <Link>SqlServerTypes\x86\SqlServerSpatial110.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="LICENSE.txt" />
-    <Content Include="SqlServerTypes\readme.htm" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common.Core.Kml\Src\Main\Common.Core.Kml.Dev.csproj">
