@@ -1,6 +1,6 @@
-﻿using System.IO;
-using Reimers.Map;
+﻿using Reimers.Map;
 using System.Collections.Generic;
+using System.IO;
 namespace Reimers.Esri
 {
 	/// <summary>

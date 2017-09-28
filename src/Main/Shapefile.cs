@@ -1,3 +1,5 @@
+using Microsoft.SqlServer.Types;
+using Reimers.Map;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,12 +8,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Xml;
-using Reimers.Map;
-
+using USC.GISResearchLab.Common.Core.KML;
 using USC.GISResearchLab.Common.Databases.Odbc;
 using USC.GISResearchLab.Common.Utils.Databases.TableDefinitions;
-using Microsoft.SqlServer.Types;
-using USC.GISResearchLab.Common.Core.KML;
 
 
 namespace Reimers.Esri

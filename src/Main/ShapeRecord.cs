@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Types;
+using Reimers.Map;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using Reimers.Map;
-using Microsoft.SqlServer.Types;
 
 namespace Reimers.Esri
 {
