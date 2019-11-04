@@ -10,16 +10,16 @@ using USC.GISResearchLab.Common.Databases.DataReaders;
 
 namespace Reimers.Esri
 {
-	/// <summary>
-	/// Holds the data contained in an ESRI shapefile.
-	/// </summary>
-	public class ShapefileDataReader : AbstractDataReader
-	{
-		#region Fields
+    /// <summary>
+    /// Holds the data contained in an ESRI shapefile.
+    /// </summary>
+    public class ShapefileDataReader : AbstractDataReader
+    {
+        #region Fields
 
-		private Stream fp;
-		private BinaryReader br;
-		private int shp_type = 0;
+        private Stream fp;
+        private BinaryReader br;
+        private int shp_type = 0;
 
         public string strError { get; set; }
         public GoogleBounds GoogleBoundsShape { get; set; }
@@ -32,26 +32,26 @@ namespace Reimers.Esri
         public new OdbcConnection FileDataConnection { get; set; }
         public new OdbcDataReader FileDataReader { get; set; }
 
-		#endregion
+        #endregion
 
         #region Events
 
 
-		/// <summary>
-		/// Triggered when an unknown shape is encountered in a shapfile definition.
-		/// </summary>
-		/// <remarks>
-		/// <para>Tie an event handler to this event to handle reading of the unknown record.</para>
-		/// </remarks>
-		public event ReadUnkownShape UnknownRecord;
+        /// <summary>
+        /// Triggered when an unknown shape is encountered in a shapfile definition.
+        /// </summary>
+        /// <remarks>
+        /// <para>Tie an event handler to this event to handle reading of the unknown record.</para>
+        /// </remarks>
+        public event ReadUnkownShape UnknownRecord;
 
-		/// <summary>
-		/// Triggered when a point has been parsed in the shapefile definition.
-		/// </summary>
-		/// <remarks>
-		/// <para>Tie an event handler to this event to handle custom conversions from coordinate types other than WGS84. The arguments are the raw numbers read in the shapefile.</para>
-		/// </remarks>
-		public event PointParsedHandler PointParsed;
+        /// <summary>
+        /// Triggered when a point has been parsed in the shapefile definition.
+        /// </summary>
+        /// <remarks>
+        /// <para>Tie an event handler to this event to handle custom conversions from coordinate types other than WGS84. The arguments are the raw numbers read in the shapefile.</para>
+        /// </remarks>
+        public event PointParsedHandler PointParsed;
 
         /// <summary>
         /// Triggered when a record has been read from the stream.
@@ -70,7 +70,7 @@ namespace Reimers.Esri
         /// </remarks>
         public event RecordsReadHandler RecordsRead;
 
-		#endregion
+        #endregion
 
         #region Properties
 
@@ -93,7 +93,7 @@ namespace Reimers.Esri
                 return ret;
             }
         }
-        
+
 
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace Reimers.Esri
 
         #endregion
 
-		#region Constructor
+        #region Constructor
 
         public ShapefileDataReader()
         {
@@ -126,13 +126,13 @@ namespace Reimers.Esri
             strError = string.Empty;
         }
 
-		/// <summary>
-		/// Creates a new instance of a Shapefile
-		/// </summary>
-		/// <param name="FileName">The path to the .shp file in the shapefile to open.</param>
-		public ShapefileDataReader(string fileName)
-		{
-			
+        /// <summary>
+        /// Creates a new instance of a Shapefile
+        /// </summary>
+        /// <param name="FileName">The path to the .shp file in the shapefile to open.</param>
+        public ShapefileDataReader(string fileName)
+        {
+
             FileName = fileName;
 
             if (Path.GetExtension(FileName).ToLower() != ".shp")
@@ -140,31 +140,31 @@ namespace Reimers.Esri
                 throw new Exception("The filename must point to the .shp file in the shapefile");
             }
 
-			fp = File.OpenRead(FileName);
-			br = new BinaryReader(fp);
-			BasicConfiguration();
+            fp = File.OpenRead(FileName);
+            br = new BinaryReader(fp);
+            BasicConfiguration();
 
-			ShapeReader = null;
-			ShapeStream = null;
-			FileDataReader = null;
+            ShapeReader = null;
+            ShapeStream = null;
+            FileDataReader = null;
 
             GoogleBoundsShape = new GoogleBounds();
             strError = string.Empty;
-		}
+        }
 
-		#endregion
+        #endregion
 
-		
 
-		#region Methods
 
-		#region Public
+        #region Methods
 
-		/// <summary>
-		/// Closes the stream objects and release all resources
-		/// </summary>
-		public void CloseStream()
-		{
+        #region Public
+
+        /// <summary>
+        /// Closes the stream objects and release all resources
+        /// </summary>
+        public void CloseStream()
+        {
             if (ShapeStream != null)
             {
                 ShapeStream.Close();
@@ -202,18 +202,18 @@ namespace Reimers.Esri
             }
 
             IsClosed = true;
-		}
+        }
 
-		/// <summary>
-		/// Resets the stream pointers to the begining of the file
-		/// </summary>
-		public void ResetNextFeature()
-		{
-			if (File.Exists(FileName))
-			{
-				ShapeStream = File.OpenRead(FileName);
-				ShapeReader = new BinaryReader(ShapeStream);
-				ShapeStream.Seek(100, SeekOrigin.Begin);
+        /// <summary>
+        /// Resets the stream pointers to the begining of the file
+        /// </summary>
+        public void ResetNextFeature()
+        {
+            if (File.Exists(FileName))
+            {
+                ShapeStream = File.OpenRead(FileName);
+                ShapeReader = new BinaryReader(ShapeStream);
+                ShapeStream.Seek(100, SeekOrigin.Begin);
 
                 if (FileDataConnection == null)
                 {
@@ -234,19 +234,19 @@ namespace Reimers.Esri
                     //FileDataConnection.Open();
                     //FileDataReader = cmd.ExecuteReader();
                 }
-			}
-		}
+            }
+        }
 
-		/// <summary>
-		/// Kaveh: Advances the shapefile file pointers to the next record and returns the associated shape and dbf data right from the file
-		/// </summary>
-		/// <returns>A new copy of the next shapefile record</returns>
-		public override bool NextFeature()
-		{
+        /// <summary>
+        /// Kaveh: Advances the shapefile file pointers to the next record and returns the associated shape and dbf data right from the file
+        /// </summary>
+        /// <returns>A new copy of the next shapefile record</returns>
+        public override bool NextFeature()
+        {
             bool ret = true;
             try
             {
-                
+
                 CurrentShapefileRecord = null;
 
                 if ((ShapeStream == null) || (FileDataReader == null))
@@ -363,7 +363,7 @@ namespace Reimers.Esri
                 throw new Exception("Exception occured in NextFeature: " + e.Message, e);
             }
             return ret;
-		}
+        }
 
         public void BasicConfiguration()
         {
@@ -373,24 +373,24 @@ namespace Reimers.Esri
             GoogleBoundsShape = ParseBoundingBox(br);
         }
 
-		#endregion
+        #endregion
 
-		#region Private
+        #region Private
 
-		public GoogleBounds ParseBoundingBox(System.IO.BinaryReader r)
-		{
-			GoogleBounds data = new GoogleBounds();
-			data.MinLongitude = r.ReadDouble();
-			data.MinLatitude = r.ReadDouble();
-			data.MaxLongitude = r.ReadDouble();
-			data.MaxLatitude = r.ReadDouble();
+        public GoogleBounds ParseBoundingBox(System.IO.BinaryReader r)
+        {
+            GoogleBounds data = new GoogleBounds();
+            data.MinLongitude = r.ReadDouble();
+            data.MinLatitude = r.ReadDouble();
+            data.MaxLongitude = r.ReadDouble();
+            data.MaxLatitude = r.ReadDouble();
 
-			return data;
-		}
+            return data;
+        }
 
-		#endregion
+        #endregion
 
-		#endregion
+        #endregion
 
         #region IDataReader Members
 
@@ -403,12 +403,12 @@ namespace Reimers.Esri
 
         public override DataTable GetSchemaTable()
         {
-            
+
             try
             {
                 if (SchemaTable == null)
                 {
-                    
+
                     string fn = string.Format(@"{0}\{1}.dbf", Path.GetDirectoryName(FileName), Path.GetFileNameWithoutExtension(FileName));
                     if (File.Exists(fn))
                     {

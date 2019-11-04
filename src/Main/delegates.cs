@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using System.IO;
 namespace Reimers.Esri
 {
-	/// <summary>
-	/// Handles reading of unknown shapefile data.
-	/// </summary>
-	/// <param name="Type">The <see cref="ShapeType"/> of the <see cref="ShapeRecord"/>.</param>
-	/// <param name="Length">The size of the <see cref="ShapeRecord"/> in <see cref="byte"/> as <see cref="int"/>.</param>
-	/// <param name="Data">The <see cref="ShapeRecord"/> data in a <see cref="Stream"/>.</param>
-	/// <param name="Overlays">The <see cref="GoogleOverlay"/> contained in the <see cref="ShapeRecord"/>.</param>
-	/// <returns>A <see cref="ShapeRecord"/> object.</returns>
-	public delegate ShapeRecord ReadUnkownShape(int Type, int Length, Stream Data, ref List<GoogleOverlay> Overlays);
+    /// <summary>
+    /// Handles reading of unknown shapefile data.
+    /// </summary>
+    /// <param name="Type">The <see cref="ShapeType"/> of the <see cref="ShapeRecord"/>.</param>
+    /// <param name="Length">The size of the <see cref="ShapeRecord"/> in <see cref="byte"/> as <see cref="int"/>.</param>
+    /// <param name="Data">The <see cref="ShapeRecord"/> data in a <see cref="Stream"/>.</param>
+    /// <param name="Overlays">The <see cref="GoogleOverlay"/> contained in the <see cref="ShapeRecord"/>.</param>
+    /// <returns>A <see cref="ShapeRecord"/> object.</returns>
+    public delegate ShapeRecord ReadUnkownShape(int Type, int Length, Stream Data, ref List<GoogleOverlay> Overlays);
 
-	/// <summary>
-	/// Default handler for <see cref="Shapefile"/> events.
-	/// </summary>
-	public delegate void ShapefileHandler();
+    /// <summary>
+    /// Default handler for <see cref="Shapefile"/> events.
+    /// </summary>
+    public delegate void ShapefileHandler();
 
-	/// <summary>
-	/// Handles writing of custom overlay types.
-	/// </summary>
-	/// <param name="Overlay">The <see cref="GoogleOverlay"/> to write.</param>
-	/// <param name="MetaData">The shapefile metadata as an object array.</param>
-	/// <returns>A KML representation of the <see cref="GoogleOverlay"/> as a <see cref="string"/>.</returns>
-	public delegate string OverlayWriter(GoogleOverlay Overlay, object[] MetaData);
+    /// <summary>
+    /// Handles writing of custom overlay types.
+    /// </summary>
+    /// <param name="Overlay">The <see cref="GoogleOverlay"/> to write.</param>
+    /// <param name="MetaData">The shapefile metadata as an object array.</param>
+    /// <returns>A KML representation of the <see cref="GoogleOverlay"/> as a <see cref="string"/>.</returns>
+    public delegate string OverlayWriter(GoogleOverlay Overlay, object[] MetaData);
 
-	/// <summary>
-	/// Handles point data after parsing.
-	/// </summary>
-	/// <param name="X">The horizontal (longitudal) value parsed from the shapefile data.</param>
-	/// <param name="Y">The vertical (latitudal) value parsed from the shapefile data.</param>
-	/// <returns>A <see cref="GoogleLatLng"/> object.</returns>
-	public delegate GoogleLatLng PointParsedHandler(double X, double Y);
+    /// <summary>
+    /// Handles point data after parsing.
+    /// </summary>
+    /// <param name="X">The horizontal (longitudal) value parsed from the shapefile data.</param>
+    /// <param name="Y">The vertical (latitudal) value parsed from the shapefile data.</param>
+    /// <returns>A <see cref="GoogleLatLng"/> object.</returns>
+    public delegate GoogleLatLng PointParsedHandler(double X, double Y);
 
     /// <summary>
     /// Handles a shapefile record being read.

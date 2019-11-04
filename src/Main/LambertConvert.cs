@@ -209,7 +209,7 @@ namespace Reimers.Esri
                     Rx = 0;
                     Ry = 0;
                     Rz = 0;
-                    break;               
+                    break;
             }
 
             double[] coords = ALG0004(X, Y, n, c, Xs, Ys, lambdac, e, epsilon);
